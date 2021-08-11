@@ -33,7 +33,11 @@ function middle(){
         stop();
     }, 2000);
 }
+middle();
 
+function stop(){
+    console.log("stop");
+}
 
 // Same goes for Promise
 (function(){
