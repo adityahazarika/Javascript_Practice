@@ -33,6 +33,49 @@ function middle(){
         stop();
     }, 2000);
 }
+
+
+// Same goes for Promise
+(function(){
+    console.log("start");
+})();
+
+function middle(){
+    return new Promise((res,rej)=>{
+        setTimeout(() => {
+            res("middle");
+        }, 2000);
+    })
+}
+middle().then((data)=>{
+    console.log(data);
+});
+
+function stop(){
+    console.log("stop");
+}
+stop()
+
+// to get expected output run next code-block
+(function(){
+    console.log("start");
+})();
+
+function middle(){
+    return new Promise((res,rej)=>{
+        setTimeout(() => {
+            res("middle");
+        }, 2000);
+    })
+}
+middle().then((data)=>{
+    console.log(data);
+    stop()
+});
+
+function stop(){
+    console.log("stop");
+}
 middle();
 
 function stop(){
