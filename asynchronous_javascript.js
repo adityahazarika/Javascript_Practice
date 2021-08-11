@@ -76,10 +76,3 @@ middle().then((data)=>{
 function stop(){
     console.log("stop");
 }
-middle();
-
-function stop(){
-    console.log("stop");
-}
-
-
