@@ -80,3 +80,23 @@ middle().then((data)=>{
 function stop(){
     console.log("stop");
 }
+
+
+
+// Catching behaviour of async function in promise
+
+async function fun1(){
+  try{
+    throw new Error("tt")
+  }
+  catch(err){
+    throw new Error ("Err ",err)  ---- This will print Reject
+//     return new Error("Err ",err); ----- This will print Resolve
+  }
+}
+
+fun1().then((data)=>{
+  console.log("Resolve",data)
+}).catch((data)=>{
+  console.log("Reject",data)
+})
