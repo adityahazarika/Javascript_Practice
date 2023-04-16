@@ -1,3 +1,5 @@
+// Check if given number exists or not in the array
+
 let arr = [3,5,6,9,12,465,999];
 
 function fun1(arr,n){
