@@ -67,3 +67,25 @@ for(let i=0;i<arr.length;i++){
 }
 
 console.log(obj)
+
+
+Q7
+let arr = ["php-1", "php-3", "php-2", "node-3", "node-1", "php-7", "python-2"]
+// ["php-7", "node-3", "python-2"]
+
+
+let obj = {};
+
+arr.forEach((it)=>{
+    let str = it.split("-")     
+    if(obj[str[0]]){
+        if(parseInt(obj[str[0]])<parseInt(str[1])){
+            obj[str[0]]=str[1];
+        }
+    }
+    else{
+        obj[str[0]] = str[1]
+    }
+});
+
+console.log(obj)
