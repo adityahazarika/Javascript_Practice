@@ -89,3 +89,27 @@ arr.forEach((it)=>{
 });
 
 console.log(obj)
+
+
+Q8
+Predict the output
+async function fun1(){
+    let a = await Promise.resolve("Hello1");    //in this case this task will be removed from the callstak and will go to event queue as it is a microtask hence the next line console.log will not get primted
+    console.log(a);
+    return a
+}
+
+async function fun2(){
+    let a = "Hello2";
+    console.log(a);
+    return a
+}
+
+async function fun3(){
+    let a = Promise.resolve("Hello3");
+    console.log(a);
+    return a    // this statement returning a resolved promise but as this is an async function this resolved promise will again gets wrapped around a new promise which will be in pending state
+}
+
+
+console.log(1,fun1(),fun2(),fun3())
