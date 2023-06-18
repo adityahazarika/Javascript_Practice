@@ -200,3 +200,19 @@ function hack_function(){
 }
 
 hack_function()
+
+Q14
+Promise.resolve("Hi").
+then((it)=>console.log("then",it)).
+then((it)=>console.log("then",2,it)).
+catch((err)=>{throw 9}).
+catch((err)=>console.log(4,err)).
+catch((err)=>console.log(5))
+.then((it)=>{console.log("then",6,it)
+throw "err"
+})
+.then((ir)=>console.log("then",ir))
+.then((ir)=>console.log("then",ir))
+.then((ir)=>console.log("then",ir))
+.catch((ir)=>console.log(ir,2))
+.then((ir)=>console.log("then",ir))
