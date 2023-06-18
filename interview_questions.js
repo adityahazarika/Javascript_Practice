@@ -113,3 +113,90 @@ async function fun3(){
 
 
 console.log(1,fun1(),fun2(),fun3())
+
+Q9 
+var demo = {};
+
+var x =  {id:1},
+y = {id:2};
+
+demo[x] = "alpha";
+demo[y] = "beta";
+
+console.log(demo[x]);
+console.log(demo[y]);
+
+
+Q10
+var hack = new Object();
+hack["hackname1"] = "Alice";
+hack["hackname2"] = "Smith";
+hack["hacker"] = 31;
+
+Object.hackerearth = function(h){
+    var hackerearth = 0,h1;
+    for(h1 in h){
+        if(h.hasOwnProperty(h1))
+        hackerearth++;
+    }
+    return hackerearth;
+}
+console.log(Object.hackerearth(hack))
+
+Q11
+var obj = {
+    x:1,
+    5:1,
+    r:1,
+    1:1,
+    g:1,
+    h:1,
+    9:1
+}
+
+obj.t = 1;
+
+console.log(Object.getOwnPropertyNames(obj).join(""))
+
+Q12
+const json1 = {
+    who:"world",
+    greet(){
+        return `Hello, ${this.who}`;
+    },
+    farewell:{
+        fun1(){
+            return `Hello ${this}`;
+        },
+    }
+}
+
+const json2 = {
+    who:"Human"
+}
+
+console.log(json1.greet());
+
+console.log(json1.farewell());
+
+console.log(json1.farewell.bind(json2)())
+console.log(json1.greet.bind(json2)())
+
+Q13
+var hack1 = 89;
+
+function hack_function(){
+    var hack2 = 56;
+    var hack3 = function(){
+        console.log(hack2);
+    }
+
+    var hack4 = function(){
+        console.log(hack1);
+    }
+
+    hack3();
+    hack4();
+}
+
+hack_function()
