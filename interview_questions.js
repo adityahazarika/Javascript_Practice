@@ -216,3 +216,20 @@ throw "err"
 .then((ir)=>console.log("then",ir))
 .catch((ir)=>console.log(ir,2))
 .then((ir)=>console.log("then",ir))
+
+
+Q15
+while (true) {
+ setTimeout(() => {
+   console.log('ABC');
+ }, 0);
+
+
+ console.log('PQR');
+
+
+ Promise.resolve()
+   .then(() => {
+     console.log('XYZ');
+   })
+}
