@@ -233,3 +233,21 @@ while (true) {
      console.log('XYZ');
    })
 }
+
+
+Q16
+var x = 10;
+
+function fun1(){
+    // if(x<10){
+    //     var x = 20
+    //     console.log(x)
+    // }
+    console.log(x)   //print undefined because of var hoisting in the next if statement and if we change var to let it will print 10
+    if(x<10){
+        var x = 20
+        console.log(x)
+    }
+}
+
+fun1()
