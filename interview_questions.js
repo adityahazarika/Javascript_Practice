@@ -251,3 +251,20 @@ function fun1(){
 }
 
 fun1()
+
+
+Q17
+//Optimized pallindrome code
+function fun1(str){
+    str = str.split("");
+
+    for(let i = 0;i<(str.length)/2;i++){
+        if(str[i]!=str[str.length-(i+1)]){
+            console.log(str[i], str[str.length-i])
+            return false
+        }
+    }
+    return true
+}
+
+console.log(fun1("malayalam"))
